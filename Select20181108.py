@@ -5,7 +5,7 @@ import datetime as dt
 import tushare as ts
 import operator as op
 #获取出现3、6金叉的股票数据
-code=pd.read_csv(r"./data/Table.csv") #读取A股列表，2016年12月10日整理
+code=pd.read_csv(r"./Table.csv") #读取A股列表，2016年12月10日整理
 list_buy=[]#  5日均线抬头股票列表
 start="2017-01-01"
 n=1  #定义最后日期是现在时间的前几天
@@ -42,6 +42,6 @@ now=dt.datetime.now()
 filename=now.strftime("%Y%m%d")#获取当前年月日并转换为字符串作为文件名
 df=pd.DataFrame(list_buy)#列表转换为dataframe
 df.to_csv('./data/result/%s'%filename+'560.csv')#写入结果文件夹
-print ("Select stock560 has finished")
+print ("Select stock has finished")
 
 
